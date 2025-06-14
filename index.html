@@ -1,60 +1,221 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>푸드등</title>
     <link rel="stylesheet" href="./css/layout.css" />
-</head>
-<body>
-    <header class="header">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
         <div class="logo">
-            <a href="/"><img src="./img/header/logo.svg" alt="푸드등"></a>
+          <h1>
+            <a href="/"><img src="./img/header/logo.svg" alt="푸드등" /></a>
+          </h1>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li>
-                    <a href="#">서비스소개</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">이용가이드</a></li>
-                        <li><a href="#">브랜드스토리</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">건강뉴스</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">건강칼럼</a></li>
-                        <li><a href="#">식품첨가물정보</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">식품검색</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">건강칼럼</a></li>
-                        <li><a href="#">전체식품찾기</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">장보기</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">선물관</a></li>
-                        <li><a href="#">초록등 식푼관</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+        <nav id="gnb">
+          <ul>
+            <li class="menu1">
+              <a href="#">서비스소개</a>
+              <ul class="sub-menu">
+                <li><a href="#">이용가이드</a></li>
+                <li><a href="#">브랜드스토리</a></li>
+              </ul>
+            </li>
+
+            <li class="menu1">
+              <a href="#">건강뉴스</a>
+              <ul class="sub-menu">
+                <li><a href="#">건강칼럼</a></li>
+                <li><a href="#">식품첨가물정보</a></li>
+              </ul>
+            </li>
+
+            <li class="menu1">
+              <a href="#">식품검색</a>
+              <ul class="sub-menu">
+                <li><a href="#">건강칼럼</a></li>
+                <li><a href="#">전체식품찾기</a></li>
+              </ul>
+            </li>
+
+            <li class="menu1">
+              <a href="#">장보기</a>
+              <ul class="sub-menu">
+                <li><a href="#">선물관</a></li>
+                <li><a href="#">초록등 식품관</a></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
+
         <div class="search-bar">
-            <input type="text" placeholder="">
-            <img src="" alt="">
+          <input type="text" placeholder="" />
+          <img src="" alt="" />
         </div>
+
         <div class="header-buttons">
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
+          <a href="#"><img src="" alt="" /></a>
+          <a href="#"><img src="" alt="" /></a>
         </div>
-    </header>
 
+        <div class="icon-menu-wrap">
+          <div class="user-icon">
+            <a href="#"><i class=""></i></a>
+          </div>
+          <div class="allmenu-icon">
+            <a href="#"><i class=""></i></a>
+          </div>
+        </div>
+      </header>
 
+      <main>
+        <section class="main-visual">
+          <img src="./img/main/main_visual.svg" alt="마트에서 장보는 사람" />
 
-    
-</body>
+          <h2 class="sec-title">카테고리별 식품 분류</h2>
+
+          <div class="food-tab">
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/croissant.svg" alt="베이커리" />
+              </div>
+              <span class="label">베이커리</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/Milk.svg" alt="유제품" />
+              </div>
+              <span class="label">유제품</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/main/Salad 1.svg" alt="간편식" />
+              </div>
+              <span class="label">간편식</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="" alt="가공육" />
+              </div>
+              <span class="label">가공육</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/main/chocolate 1.svg" alt="초콜렛" />
+              </div>
+              <span class="label">간식</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/main/Sauce 1.svg" alt="양념" />
+              </div>
+              <span class="label">양념</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/main/Ramen 1.svg" alt="면류" />
+              </div>
+              <span class="label">면류</span>
+            </a>
+
+            <a href="#" class="food-tab-btn">
+              <div class="icon-bg">
+                <img src="./img/main/coffee.svg" alt="음료" />
+              </div>
+              <span class="label">음료</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="sec1">
+          <h2 class="sec-title">실시간 식품 순위</h2>
+          <h3 class="sec-sub-title">
+            카테고리별 성분 좋은 식품 TOP 3를 만나보세요.
+          </h3>
+
+          <div class="card-wrap">
+            <div class="card">
+              <img src="./img/main/sec2meat.svg" alt="가공육" />
+            </div>
+            <div class="card">
+              <img src="./img/main/yogurt.svg" alt="요거트" />
+            </div>
+            <div class="card">
+              <img src="./img/main/pajeon.svg" alt="파전" />
+            </div>
+            <div class="card">
+              <img src="./img/main/bread.svg" alt="식빵" />
+            </div>
+          </div>
+        </section>
+
+        <section class="sec2">
+          <h2 class="sec-title">푸드등에 상품이 등록된 회사들</h2>
+          <h3 class="sec-sub-title">
+            신뢰할 수 있는 브랜드로 건강한 선택을 하세요.
+          </h3>
+          <!-- 스와이퍼 슬라이드 넣기 -->
+        </section>
+
+        <section class="sec3">
+          <h2 class="sec-title">실시간 고객 후기</h2>
+          <h3 class="sec-sub-title">
+            여러분의 경험을 공유해주세요.
+          </h3>
+          <div class="card-wrap">
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="sec4">
+          <h2 class="sec-title">이용가이드</h2>
+          <h3 class="sec-sub-title">
+            건강한 습관 푸드등을 시작해보세요.
+          </h3>
+          <!-- 스와이퍼 슬라이드 넣기 -->
+        </section>
+
+        <section class="sec5">
+          <h2 class="sec-title">누구나 쉽게 사용할 수 있어 사랑받는 푸드등</h2>
+          <h3 class="sec-sub-title">
+            확장되는 영향력
+          </h3>
+          <div class="card-wrap">
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+            <div class="card">
+              <img src="" alt="" />
+            </div>
+        </section>
+      </main>
+
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
 </html>

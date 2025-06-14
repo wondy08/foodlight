@@ -1,6 +1,134 @@
 @charset "utf-8";
-/* 구글폰트-Noto Sans KR연결결 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+}
 
+/* 웹폰트 */
+.body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  width: 1400px;
+  height: 84px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 176, 147);
+}
+
+.ul {
+  display: flex;
+}
+.menu1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#gnb > ul {
+  display: flex;
+  gap: 44px;
+}
+
+.sub-menu li {
+  overflow: hidden;
+  line-height: 20px;
+}
+
+/* 메인 공통영역 */
+.sec-title {
+  margin: 100px 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #434343;
+}
+.sec-sub-title {
+  font-size: 20px;
+  color: #7d7979;
+  margin: 40px 0px;
+}
+/* 메인비주얼 */
+.main-visual {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* 메인비주얼 영역-식품카테고리 */
+.food-tab {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.food-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 108px;
+  height: 128px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  /* padding-top: 16px; */
+  box-sizing: border-box;
+}
+
+.icon-bg {
+  width: 108px;
+  height: 128px;
+  background-color: #eae9e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-bg img {
+  width: 54px;
+  height: 54px;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sec1 {
+  margin: 0 auto;
+  width: 1400px;
+  height: 1200px;
+}
+
+.sec1 > h2 {
+  padding-top: 200px;
+  box-sizing: border-box;
+}
+.sec1 > h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sec1 > .card-wrap > .card {
+  width: 320px;
+  height: 250px;
+  background-color: rgb(22, 114, 194);
+}
+.sec1 > .card-wrap {
+  display: flex;
+  gap: 40px;
+}
