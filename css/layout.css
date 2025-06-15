@@ -88,15 +88,17 @@ sec5 제목 컬러 오버라이드
 section h3{
   text-align: center;
 }
-section, .main-visual {
+section{
   margin: 0 auto;
   width: 1400px;
   height: 1200px;
-
   display: flex;               
   flex-direction: column;       
   justify-content: center;      
   align-items: center;         
+}
+.main-visual{
+  height: 780px;
 }
 .wrapper {
   width: 100%;
@@ -262,7 +264,8 @@ header {
   top: 84px;
 }
 #category{
-  margin-top: 100px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -328,7 +331,7 @@ header {
 }
 
 /* 섹션 공통영역 */
-section, .main-visual{
+section:not(.main-visual){
   margin: 0 auto;
   width: 1400px;
   height: 1200px;
@@ -472,12 +475,12 @@ section, .main-visual{
     transform: translateX(-100%);
   }
 }
-/* 네번째 섹션 */
+/* 세번째 섹션 */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
+  gap: 40px;
+  max-width: 1400px;
 }
 .review-card {
   border: 2px solid rgba(151, 215, 95, 0.5); 
@@ -485,14 +488,16 @@ section, .main-visual{
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 200px; 
+  height: 240px; 
   box-sizing: border-box;
 }
 .card-top {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+}
+.card-top > img{
+  padding-bottom: 18px;
 }
 .user-icon {
   width: 50px;
@@ -512,8 +517,9 @@ section, .main-visual{
   font-weight: bold;
 }
 .user-name {
-  font-size: 13px;
-  margin-top: 2px;
+  font-size: 16px;
+  margin-top: 8px;
+  text-align: center;
 }
 .stars {
   color: #f5c518; 
@@ -524,8 +530,79 @@ section, .main-visual{
   text-align: center;
   font-size: 12px;
   color: #737373;
-  margin-top: auto;
-  padding-top: 20px;
+  margin-top: 10px;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* 네번째 섹션 */
+.tab-section {
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+/* 칩 버튼 */
+.chip-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.chip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  padding: 20px 14px;
+  border-radius: 500px;
+  background-color: #32c75f;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.chip:hover {
+  background-color: #2bd41b;
+}
+.chip-icon {
+  width: 20px;
+  height: 20px;
+}
+#user-guide-wrap{
+  display: flex;
+  width: 100%;
+}
+/* 카드 3개 가로 정렬 */
+.card-container {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+.card {
+  flex: 1;
+  max-width: 320px;
+  height: 480px;
+  background: #ebebeb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-name {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* 다섯번째 섹션 */
@@ -545,16 +622,22 @@ section, .main-visual{
   width: 170px;
   height: 152px;
   background-color: #fff;
+  border-radius: 14px;
 }
-.sec1{
-  background-color: lightblue;
+.sec5 .card img{
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
-.sec3{
-  background-color: lightgoldenrodyellow;
+.sec5 .card > span{
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
 }
-.sec4{
-  background-color: lightpink;
+
+.sec5 .card:last-child img{
+  padding-left: 16px;
 }
 .sec5{
-  background-color: lightseagreen;
+  background-color: rgb(107, 228, 118);
 }
