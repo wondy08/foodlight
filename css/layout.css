@@ -2,81 +2,15 @@
 @import url(./reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* :root {
-  --color-primary: #32c75f;
-  --color-primary-dark: #26a04b;
-  --color-accent: #32b768;
-  --color-text-main: #333;
-  --color-text-sub: #737373;
-  --color-heading: #434343;
-  --color-subheading: #7d7979;
-  --color-white: #ffffff;
-  --color-light-gray: #eae9e9;
-  --font-main: "Roboto", sans-serif;
-  --fs-h1: 36px;
-  --fs-h2: 28px;
-  --fs-h3: 20px;
-  --fs-base: 16px;
-  --fs-small: 14px;
-
-  --section-padding-y: 120px;
-  --title-margin-bottom: 60px;
-
-
-  --container-width: 1400px;
-
-body {
-  font-family: var(--font-main);
-  font-size: var(--fs-base);
-  color: var(--color-text-main);
+:root {
+  /* 글자크기 */
+  --font-size-xxl: 36px;
+  --font-size-xl: 20px;
+  --font-size-l: 18px;
+  --font-size-base: 16px;
+  --font-size-m: 15px;
+  --font-size-s: 14px;
 }
-
-.wrapper, section, .main-visual {
-  width: var(--container-width);
-  margin: 0 auto;
-  padding: var(--section-padding-y) 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.sec-title {
-  font-size: var(--fs-h1);
-  font-weight: bold;
-  text-align: center;
-  color: var(--color-heading);
-  margin-bottom: var(--title-margin-bottom);
-}
-
-.sec-sub-title {
-  font-size: var(--fs-h3);
-  color: var(--color-subheading);
-  text-align: center;
-  margin-bottom: var(--title-margin-bottom);
-}
-
-section h3 {
-  font-size: var(--fs-h3);
-  text-align: center;
-  margin-bottom: var(--title-margin-bottom);
-}
-
-섹션 중앙 배치 (높이 자동, 수직 정렬)
-section, .main-visual {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-sec5 제목 컬러 오버라이드 
-.sec5 > .sec-title {
-  color: var(--color-white);
-  padding-top: 60px;
-} 
-  */
-
 /* 웹폰트 */
 .body {
   font-family: "Roboto", sans-serif;
@@ -84,9 +18,6 @@ sec5 제목 컬러 오버라이드
   font-variation-settings: "wdth" 100;
 }
 /* 공통영역지정 */
-section h3 {
-  text-align: center;
-}
 section {
   margin: 0 auto;
   width: 1400px;
@@ -96,25 +27,34 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+section h3 {
+  text-align: center;
+}
+
 .main-visual {
   height: 780px;
 }
+
 .wrapper {
   width: 100%;
 }
+
 .menu1 {
   position: relative;
 }
+
 /* 링크 기본 */
 .menu1 > a {
   position: relative;
   display: inline-block;
   padding: 10px 0;
-  font-size: 18px;
+  font-size: var(font-size-l);
   font-weight: 500;
   color: #303030;
   text-decoration: none;
 }
+
 /* 밑줄 애니메이션 */
 .menu1 > a::after {
   content: "";
@@ -123,20 +63,23 @@ section {
   left: 50%;
   transform: translateX(-50%) scaleX(0.2);
   transform-origin: center;
-  width: 100%;
+  width: 50%;
   height: 2px;
   background-color: #32b768;
   transition: transform 0.4s ease;
   display: none;
 }
+
 .menu1:hover > a {
   font-weight: bold;
 }
+
 /* hover 시 밑줄 확장 */
 .menu1:hover > a::after {
   transform: translateX(-50%) scaleX(1);
   display: flex;
 }
+
 /* 2차 메뉴 스타일 */
 .sub-menu {
   position: absolute;
@@ -145,39 +88,43 @@ section {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-height: 0;
+  max-height: 200px;
   opacity: 0;
   pointer-events: none;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   border-radius: 4px;
   z-index: 10;
 }
+
 /* 2차 메뉴 항목 */
 .sub-menu li a {
   display: block;
   white-space: nowrap;
   padding: 10px 16px;
-  font-size: 15px;
+  font-size: var(--font-size-m);
   color: #333;
   text-decoration: none;
 }
+
 /* hover 시 2차 메뉴 활성화 */
 .menu1:hover .sub-menu {
-  max-height: 500px;
+  max-height: 800px;
   opacity: 1;
   pointer-events: auto;
 }
+
 /* gnb 레이아웃 */
 #gnb > ul {
   display: flex;
   gap: 60px;
 }
+
 /* 헤더 가림 영역 처리 */
 header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* 전체 너비 */
+  width: 100%;
   height: 84px;
   background-color: #fff;
   z-index: 1000;
@@ -198,24 +145,29 @@ header {
 .ul {
   display: flex;
 }
+
 .menu1 {
-  font-size: 18px;
+  font-size: var(--font-size-l);
   font-weight: 500;
 }
+
 #gnb > ul {
   display: flex;
   gap: 44px;
 }
+
 .sub-menu li {
   overflow: hidden;
   line-height: 20px;
 }
+
 /* 서치바 */
 .search-bar {
   position: relative;
   width: 100%;
   max-width: 280px;
 }
+
 .search-input {
   width: 100%;
   padding: 8px 32px 8px 0;
@@ -227,6 +179,7 @@ header {
   color: #333;
   outline: none;
 }
+
 .search-btn {
   position: absolute;
   top: 60%;
@@ -237,19 +190,24 @@ header {
   cursor: pointer;
   padding: 0;
 }
+
 .search-input:focus {
   border-bottom-color: #26a04b;
 }
+
 .search-btn:focus-visible {
   outline: 2px solid #26a04b;
 }
+
 .icon-menu-wrap {
   display: flex;
   align-items: center;
 }
+
 .user-icon {
   margin-top: 26px;
 }
+
 .user-icon a,
 .cart-icon a {
   padding: 10px;
@@ -261,14 +219,16 @@ header {
   position: absolute;
   top: 84px;
 }
+
 #category {
   margin-top: 200px;
   margin-bottom: 100px;
-  font-size: 36px;
+  font-size: var(--font-size-xxl);
   font-weight: bold;
   text-align: center;
   color: #434343;
 }
+
 /* 메인비주얼 영역-식품카테고리 */
 .food-tab {
   display: flex;
@@ -282,16 +242,16 @@ header {
 .sec-title {
   margin-bottom: 60px;
   /* box-sizing: border-box; */
-  font-size: 36px;
+  font-size: var(--font-size-xxl);
   font-weight: bold;
   text-align: center;
   color: #434343;
 }
+
 .sec-sub-title {
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   color: #7d7979;
   margin-bottom: 60px;
-  /* box-sizing: border-box; */
 }
 
 /* 음식카테고리 메뉴 */
@@ -307,6 +267,7 @@ header {
   position: relative;
   box-sizing: border-box;
 }
+
 .icon-bg {
   width: 108px;
   height: 128px;
@@ -316,15 +277,17 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .icon-bg img {
   width: 54px;
   height: 54px;
 }
+
 .label {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: var(--font-size-s);
   text-align: center;
-  font-size: 18px;
+  font-size: var(--font-size-l);
   font-weight: 600;
 }
 
@@ -341,6 +304,7 @@ section:not(.main-visual) {
   display: inline-block;
   margin: 10px;
 }
+
 .card-labels {
   position: absolute;
   bottom: 14px;
@@ -350,15 +314,17 @@ section:not(.main-visual) {
   gap: 4px;
   z-index: 2;
 }
+
 .label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 26px;
-  font-size: 14px;
+  font-size: var(--font-size-s);
   font-weight: 500;
 }
+
 /* 카드라벨 */
 .label.a {
   background-color: #30ed3d;
@@ -372,11 +338,13 @@ section:not(.main-visual) {
   background-color: #b5fff7;
   color: #5a5858;
 }
+
 /* 카드사이즈 */
 .sec1 > .card-wrap {
   display: flex;
   gap: 40px;
 }
+
 .sec1 > .card-wrap > .card {
   width: 320px;
   height: 250px;
@@ -384,39 +352,52 @@ section:not(.main-visual) {
   display: inline-block;
   vertical-align: top;
 }
+
 .sec1 > .card-wrap > .card > img {
   width: 320px;
   height: 250px;
   object-fit: cover;
 }
+
 .card-wrap .card img {
   position: relative;
   width: 100%;
 }
+
 /* 카드 아래 텍스트 박스 */
 .card-text {
   padding: 10px 5px 5px;
   text-align: left;
 }
-/* 첫 줄: 상품명 + 아이콘 */
+
 .text-line1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: var(--font-size-xxl);
 }
+
+.card-wrap .card-text .text-line2 {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: #252525;
+}
+
 .product-name {
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--font-size-m);
   color: #333;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 130px;
 }
+
 .icons {
   display: flex;
   gap: 6px;
 }
+
 .icons img {
   width: 20px;
   height: 20px;
@@ -424,7 +405,6 @@ section:not(.main-visual) {
   cursor: pointer;
 }
 
-/* 나머지 줄 */
 .text-line2 {
   font-size: 13px;
   color: #666;
@@ -432,7 +412,7 @@ section:not(.main-visual) {
 }
 
 .text-line3 {
-  font-size: 14px;
+  font-size: var(--font-size-s);
   font-weight: 500;
   color: #111;
   margin-top: 2px;
@@ -446,17 +426,20 @@ section:not(.main-visual) {
   height: 100px;
   background-color: #fff;
 }
+
 .logo-track {
   display: flex;
   width: max-content;
   animation: scroll 40s linear infinite;
 }
+
 .logo-track img:not(:last-child) {
   height: 100px;
   width: auto;
   margin: 0 30px;
   object-fit: contain;
 }
+
 .logo-track img:nth-child(6),
 .logo-track img:last-child {
   height: 50px;
@@ -465,6 +448,7 @@ section:not(.main-visual) {
   object-fit: scale-down;
   padding-top: 26px;
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -473,6 +457,7 @@ section:not(.main-visual) {
     transform: translateX(-100%);
   }
 }
+
 /* 세번째 섹션 */
 .card-grid {
   display: grid;
@@ -480,6 +465,7 @@ section:not(.main-visual) {
   gap: 40px;
   max-width: 1400px;
 }
+
 .review-card {
   border: 2px solid rgba(151, 215, 95, 0.5);
   padding: 20px;
@@ -489,20 +475,28 @@ section:not(.main-visual) {
   height: 240px;
   box-sizing: border-box;
 }
+
 .card-top {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4fdf1;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
 }
+
 .card-top > img {
   padding-bottom: 18px;
 }
+
 .user-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .user-info {
   display: flex;
   width: 50%;
@@ -510,20 +504,33 @@ section:not(.main-visual) {
   justify-content: center;
   text-align: center;
 }
+
 .used-days {
-  font-size: 14px;
+  font-size: var(--font-size-s);
   font-weight: bold;
 }
+
 .user-name {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   margin-top: 8px;
   text-align: center;
 }
+
 .stars {
   color: #f5c518;
-  font-size: 14px;
+  font-size: var(--font-size-s);
   margin-top: 4px;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .card-bottom {
   text-align: center;
   font-size: 12px;
@@ -543,6 +550,7 @@ section:not(.main-visual) {
   box-sizing: border-box;
   align-items: flex-start;
 }
+
 /* 칩 버튼 */
 .chip-buttons {
   display: flex;
@@ -550,6 +558,7 @@ section:not(.main-visual) {
   justify-content: center;
   gap: 36px;
 }
+
 .chip {
   display: flex;
   justify-content: space-between;
@@ -560,102 +569,191 @@ section:not(.main-visual) {
   border-radius: 500px;
   background-color: #32c75f;
   color: white;
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
 }
+
 .chip:nth-child(2) {
   justify-content: center;
   gap: 14px;
 }
+
 .chip:hover {
   background-color: #3ff02f;
   color: #303030;
 }
+
 .chip-icon {
   width: 24px;
   height: 24px;
 }
+
 #user-guide-wrap {
   display: flex;
   width: 100%;
 }
+
 /* 카드 3개 가로 정렬 */
-.card-container {
+.sec4 .card-container {
   display: flex;
-  gap: 4px;
-  flex: 1;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-}
-.card {
-  flex: 1;
-  max-width: 320px;
-  height: 460px;
-  background: #ebebeb;
-  border-radius: 16px;
-  padding: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.card img {
-  width: 100%;
+/* 개별 카드 스타일 */
+.sec4 .card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(68, 68, 68, 0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sec4 .card img {
+  max-width: 100%;
+  max-height: 220px;
   height: auto;
-  border-radius: 8px;
+  object-fit: contain;
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
 }
 
-.product-name {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
+/* 카드 하단 텍스트*/
+.sec4 .card-text {
+  padding: 16px 20px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 /* 다섯번째 섹션 */
-.sec5 {
-  /* background-color: #32b768; */
-}
 .sec5 > .con_wrap {
   width: 100vw;
-  height: 600px;
+  height: auto;
   background-color: #32b768;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
-.sec5 > h3,
-.sec5 > .sec-title {
+
+.sec5 .sec-title {
   color: #fff;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
+
+.sec5 .sec-sub-title {
+  color: #fff;
+  font-size: var(--font-size-xl);
+  margin-bottom: 40px;
+}
+
 .sec5 .card-wrap {
-  justify-content: center;
-}
-.sec5 .card-wrap .card {
-  width: 140px;
-  height: 100px;
-  background-color: #cccccc;
-  border-radius: 14px;
-}
-.sec5 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-}
-.sec5 .user-name {
-  padding-top: 30px;
-}
-.sec5 .card > span {
-  text-align: center;
-  margin-left: 40px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-.sec5 .card:nth-child(2) > span {
-  text-align: center;
-  margin-left: 64px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-.sec5 .card:last-child img {
-  padding-left: 16px;
-}
-/* 푸터 */
-footer {
   display: flex;
-  line-height: 1.3;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 카드 스타일 */
+.sec5 .card-wrap .card {
+  width: 160px;
+  height: 160px;
+  background-color: #fff; /* 흰색 배경 */
+  border-radius: 14px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sec5 .card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.sec5 .user-name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sec5 .card > span {
+  display: block;
+  margin-top: 6px;
+  font-size: var(--font-size-base);
+  color: #333;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #f6f6f6;
+  padding: 40px 20px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #00a66c; /* 강조 초록색 */
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
 }
